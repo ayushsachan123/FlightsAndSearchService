@@ -1,6 +1,6 @@
-import express from "express";
-import serverConfig from "./config/serverConfig.js";
-import bodyParser from "body-parser";
+const express = require("express");
+const bodyParser = require("body-parser");
+const serverConfig = require("./config/serverConfig.js");
 
 const setupAndStartServer = async () => {
     const app = express();
@@ -10,6 +10,6 @@ const setupAndStartServer = async () => {
     app.listen(serverConfig.PORT, () => {
         console.log(`Server is running on port ${serverConfig.PORT}`);
     });
-}
+};
 
 setupAndStartServer();

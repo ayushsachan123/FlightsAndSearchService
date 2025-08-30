@@ -1,7 +1,6 @@
 {
   "name": "flightsandsearch",
   "version": "1.0.0",
-  "type": "module",
   "description": "Micro service for handling flight CRUD",
   "main": "index.js",
   "scripts": {
