@@ -35,6 +35,16 @@ class CityService {
     }
   }
 
+  async getAllCities() {
+    try {
+        const cities = await this.cityRepository.getAllCities();
+        return cities;
+    } catch (error) {
+        console.error("Error getting all cities:", error);
+        throw new Error("City retrieval failed");
+    }
+  }
+
   async getCity(cityId) {
     try {
         const city = await this.cityRepository.getCity(cityId);
