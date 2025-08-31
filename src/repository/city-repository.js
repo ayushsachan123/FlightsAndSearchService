@@ -17,6 +17,7 @@ class CityRepository {
           id: cityId,
         },
       });
+      return true;
     } catch (error) {
       throw new Error("Error deleting city");
     }
