@@ -23,6 +23,16 @@ class FlightService {
             throw error;
         }
     }
+
+    async getAllFlights(filter) {
+        try {
+            const flights = await this.flightRepository.getAllFlights(filter);
+            return flights;
+        } catch (error) {
+            console.error("Error fetching all flights:", error);
+            throw error;
+        }
+    }
 }
 
 module.exports = FlightService;
